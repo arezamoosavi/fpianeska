@@ -7,16 +7,42 @@ services:
       dockerfile: ./container/Dockerfile
     volumes:
       - ./src:/opt/project
-    expose:
-      - 4040
-      - 8081
-      - 7077
     ports:
       - 4040:4040
       - 7077:7077
       - 8081:8081
+      - 8080:8080
+      - 18080:18080
     restart: unless-stopped
     command: sh /run.sh
+  # zookeeper:
+  #   image: confluentinc/cp-zookeeper:5.2.0
+  #   hostname: zookeeper
+  #   ports:
+  #     - "2181:2181"
+  #   expose:
+  #     - "2181"
+  #   environment:
+  #     ZOOKEEPER_CLIENT_PORT: 2181
+  #     ZOOKEEPER_TICK_TIME: 2000
+  #   restart: unless-stopped
+  # kafka:
+  #   image: confluentinc/cp-kafka:5.2.0
+  #   hostname: kafka
+  #   ports:
+  #     - "9092:9092"
+  #   expose:
+  #     - "9092"
+  #   depends_on:
+  #     - zookeeper
+  #   environment:
+  #     KAFKA_BROKER_ID: 1
+  #     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  #     KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+  #     KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+  #     KAFKA_AUTO_CREATE_TOPICS_ENABLE: "True"
+  #     KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  #   restart: unless-stopped
   # namenode:
   #   image: bde2020/hadoop-namenode:2.0.0-hadoop3.1.1-java8
   #   container_name: namenode

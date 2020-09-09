@@ -101,6 +101,10 @@ ENV HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 ENV HADOOP_OPTS="-Djava.library.path=$HADOOP_COMMON_LIB_NATIVE_DIR"
 ENV LD_LIBRARY_PATH=$HADOOP_HOME/lib/native
 
+ENV PATH=$PATH:$SPARK_HOME/sbin
+RUN mkdir -p /opt/spark/history
+COPY container/spark-defaults.conf /opt/spark/conf/spark-defaults.conf
+
 #Workiingg
 RUN mkdir -p /opt/project
 COPY ./src ./opt/project
@@ -109,3 +113,4 @@ COPY container/run.sh /run.sh
 RUN chmod a+rwx /run.sh
 
 WORKDIR /opt/project
+# ENTRYPOINT bash /opt/spark/sbin/start-master.sh ; bash /opt/spark/sbin/start-slave.sh spark://localhost:7077

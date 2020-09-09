@@ -1,2 +1,7 @@
 *.class
 *.log
+.idea
+
+src/scala_stuff/project/target
+src/scala_stuff/project/project
+
