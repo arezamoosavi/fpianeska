@@ -29,5 +29,6 @@ echo "worker started at port 8081 ...."
 # sbt clean assembly
 # spark-submit --master spark://spark:7077 --verbose RatingsCounter-assembly-1.0.jar 
 # spark-submit --master spark://spark:7077 --verbose MovieSimilarities-assembly-1.0.jar 60
+# spark-submit --master spark://spark:7077 --verbose SparkSQL-assembly-1.0.jar 
 
 sleep 100000
