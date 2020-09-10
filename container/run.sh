@@ -26,7 +26,8 @@ echo "worker started at port 8081 ...."
 
 # spark-submit --master spark://spark:7077 --verbose /opt/project/pi.py
 # spark-submit --class org.apache.spark.examples.SparkPi --master spark://spark:7077 --verbose /opt/spark/examples/jars/spark-examples*.jar 10
-# sbt assembly
+# sbt clean assembly
 # spark-submit --master spark://spark:7077 --verbose RatingsCounter-assembly-1.0.jar 
+# spark-submit --master spark://spark:7077 --verbose MovieSimilarities-assembly-1.0.jar 60
 
 sleep 100000

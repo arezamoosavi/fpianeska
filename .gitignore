@@ -2,6 +2,11 @@
 *.log
 .idea
 
-src/scala_stuff/project/target
-src/scala_stuff/project/project
+src/scala_stuff/RatingsCounter/target
+src/scala_stuff/RatingsCounter/project/project
+src/scala_stuff/RatingsCounter/project/target
 
+
+src/scala_stuff/MovieSimilarities/project/project
+src/scala_stuff/MovieSimilarities/project/target
+src/scala_stuff/MovieSimilarities/target
