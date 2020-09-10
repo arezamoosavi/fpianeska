@@ -7,7 +7,6 @@ src/scala_stuff/RatingsCounter/target
 src/scala_stuff/RatingsCounter/project/project
 src/scala_stuff/RatingsCounter/project/target
 
-
 src/scala_stuff/MovieSimilarities/project/project
 src/scala_stuff/MovieSimilarities/project/target
 src/scala_stuff/MovieSimilarities/target
@@ -15,3 +14,9 @@ src/scala_stuff/MovieSimilarities/target
 src/scala_stuff/SQL/project/project
 src/scala_stuff/SQL/project/target
 src/scala_stuff/SQL/target
+
+src/scala_stuff/ALS/project/project
+src/scala_stuff/ALS/project/target
+src/scala_stuff/ALS/target
+
+src/java_pkg/spark-warehouse
