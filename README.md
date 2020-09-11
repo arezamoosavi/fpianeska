@@ -1,2 +1,2 @@
 # fpianeska
-Hands on bigdata (I dont know right now)
+Hands on bigdata (Spark and Scala)
